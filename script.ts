@@ -1,8 +1,6 @@
 const nome = "Renzi";
-
 const idade = 23;
-
-console.log(nome);
+const aluno = { nome, idade };
 
 function somar(a: number, b: number) {
    console.log(a + b);
@@ -10,4 +8,13 @@ function somar(a: number, b: number) {
 
 somar(1, 2);
 
-console.log("Ola maria, tudo bem");
+// Ex 1 - função toNumber
+function toNumber(valor: number | string) {
+   if (Number(valor)) {
+      console.log(Number(valor));
+   } else {
+      console.log("Não dá para converter o valor passado");
+   }
+}
+
+toNumber(1);
