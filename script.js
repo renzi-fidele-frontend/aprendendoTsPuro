@@ -25,3 +25,12 @@ async function apanharDummy() {
     });
 }
 apanharDummy();
+// Ex 3 - Fazendo fetch da api do Origamid
+async function getOrigamid() {
+    const res = await fetch("https://api.origamid.dev/json/notebook.json")
+        .then((v) => v.json())
+        .then((v) => {
+        console.log(v);
+    });
+}
+getOrigamid();

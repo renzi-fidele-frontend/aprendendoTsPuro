@@ -35,3 +35,31 @@ async function apanharDummy() {
       });
 }
 apanharDummy();
+
+// Dica: A forma mais eficas é copiar o objeto no developer tools e colar aqui
+interface OrigamidApi {
+   nome: string;
+   preco: number;
+   descricao: string;
+   garantia: string;
+   seguroAcidentes: boolean;
+   empresaFabricante: {
+      nome: string;
+      fundacao: number;
+      pais: string;
+   };
+   empresaMontadora: {
+      nome: string;
+      fundacao: number;
+      pais: string;
+   };
+}
+// Ex 3 - Fazendo fetch da api do Origamid
+async function getOrigamid() {
+   const res = await fetch("https://api.origamid.dev/json/notebook.json")
+      .then((v) => v.json())
+      .then((v: OrigamidApi) => {
+         console.log(v);
+      });
+}
+getOrigamid();
