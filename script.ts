@@ -16,5 +16,22 @@ function toNumber(valor: number | string) {
       console.log("Não dá para converter o valor passado");
    }
 }
-
 toNumber(1);
+
+// Utilizar interface para definir objetos e type para o restante
+
+// -----------------------------------------------------------------
+
+interface respostaApi {
+   status: string;
+   method: string;
+}
+// Ex 2 - Fazendo fetch
+async function apanharDummy() {
+   const res = await fetch("https://dummyjson.com/test")
+      .then((v) => v.json())
+      .then((v: respostaApi) => {
+         console.log(v);
+      });
+}
+apanharDummy();

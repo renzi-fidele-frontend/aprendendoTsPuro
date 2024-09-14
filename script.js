@@ -16,3 +16,12 @@ function toNumber(valor) {
     }
 }
 toNumber(1);
+// Ex 2 - Fazendo fetch
+async function apanharDummy() {
+    const res = await fetch("https://dummyjson.com/test")
+        .then((v) => v.json())
+        .then((v) => {
+        console.log(v);
+    });
+}
+apanharDummy();
