@@ -63,3 +63,16 @@ async function getOrigamid() {
       });
 }
 getOrigamid();
+
+// Ex 4 - Tipagem de arrays
+const valores = [1, 2, 3, 4, 5, 6, 7];
+const valoresComString = [1, 2, 3, 4, "Angela", "Renzi", 7];
+
+function filtrarMaior(array: number[]) {
+   let maiorAtual = 0;
+   array.map((v) => {
+      if (v > maiorAtual) maiorAtual = v;
+   });
+   console.log(`O maior valor do Array é: ${maiorAtual}`);
+}
+filtrarMaior(valores);
