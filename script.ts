@@ -36,7 +36,10 @@ async function apanharDummy() {
 }
 apanharDummy();
 
-// Dica: A forma mais eficas é copiar o objeto no developer tools e colar aqui
+/*  Ex 3 - Fazendo fetch da api do Origamid
+    Dica: A forma mais eficaz é copiar o objeto no developer tools e colar aqui  
+*/
+
 interface OrigamidApi {
    nome: string;
    preco: number;
@@ -54,7 +57,6 @@ interface OrigamidApi {
       pais: string;
    };
 }
-// Ex 3 - Fazendo fetch da api do Origamid
 async function getOrigamid() {
    const res = await fetch("https://api.origamid.dev/json/notebook.json")
       .then((v) => v.json())
@@ -76,3 +78,24 @@ function filtrarMaior(array: number[]) {
    console.log(`O maior valor do Array é: ${maiorAtual}`);
 }
 filtrarMaior(valores);
+
+// Ex 5 - Fazendo fetch dos cursos na api do Origamid
+interface cursosOrigamid {
+   nome: string;
+   horas: number;
+   aulas: number;
+   gratuito: boolean;
+   tags: string[];
+   idAulas: number[];
+   nivel: "iniciante" | "avancado";
+}
+async function getCursos() {
+   const res = await fetch("https://api.origamid.dev/json/cursos.json")
+      .then((v) => v.json())
+      .then((v: cursosOrigamid[]) => {
+         v.map((v) => {
+            console.log(v);
+         });
+      });
+}
+getCursos();
