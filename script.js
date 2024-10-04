@@ -55,3 +55,5 @@ async function getCursos() {
     });
 }
 getCursos();
+// Sobre Null e Undefined
+const btn = document.querySelector("#myBtn");
