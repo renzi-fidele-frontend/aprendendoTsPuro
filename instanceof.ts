@@ -13,5 +13,19 @@ class Aluno {
    }
 }
 
+class Universitario {
+   faculdade: string;
+   constructor(faculdade: string) {
+      this.faculdade = faculdade;
+   }
+}
+
 const aluno1 = new Aluno("Renzi Fidele", 23);
 aluno1.mostrarDadosAluno();
+
+function mostrarAluno(nome: string, facul: boolean) {
+   return facul ? new Universitario("UEM") : new Aluno(nome, 21);
+}
+
+
+const alunoFacul = mostrarAluno("Universidade", true)
