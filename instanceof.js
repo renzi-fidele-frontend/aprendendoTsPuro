@@ -37,3 +37,12 @@ function alterarLink(novoLink) {
     }
 }
 alterarLink("https://origamid.com");
+// Exercicio 2 - Alterar cor e borda dos elementos de classe link
+const links = document.querySelectorAll(".link");
+links.forEach((el) => {
+    if (el instanceof HTMLElement) {
+        el.style.border = "2px solid blue";
+        el.style.color = "orange";
+        el.style.backgroundColor = "white";
+    }
+});
