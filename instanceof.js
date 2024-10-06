@@ -23,3 +23,7 @@ function mostrarAluno(nome, facul) {
     return facul ? new Universitario("UEM") : new Aluno(nome, 21);
 }
 const alunoFacul = mostrarAluno("Universidade", true);
+if (alunoFacul instanceof Universitario)
+    console.log(alunoFacul.faculdade);
+if (alunoFacul instanceof Aluno)
+    console.log(alunoFacul.nome);
