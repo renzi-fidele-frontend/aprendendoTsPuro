@@ -27,3 +27,13 @@ if (alunoFacul instanceof Universitario)
     console.log(alunoFacul.faculdade);
 if (alunoFacul instanceof Aluno)
     console.log(alunoFacul.nome);
+// Exercicio instanceof - Selecionar botão e atualizar o link
+const el = document.querySelector("#btn");
+function alterarLink(novoLink) {
+    console.log("running");
+    if (el instanceof HTMLAnchorElement) {
+        el.href = novoLink;
+        console.log("Link alterado com sucesso");
+    }
+}
+alterarLink("https://origamid.com");
