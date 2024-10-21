@@ -10,3 +10,16 @@ function identificarElogar(arg) {
     console.log(arg.length);
     return arg;
 }
+const dados = identificarElogar([1, 2, 3, 4, 5, 4, 6, 7]);
+const dados_strings = identificarElogar(["Maria", "Angela", "Fidele", "Van", "William"]);
+dados_strings.map((v) => v.length);
+//  Ex 2 - Função que retorna valores que não são Null
+function notNull(arg) {
+    if (arg !== null)
+        return arg;
+    else
+        return null;
+}
+const d_aluno = { nome: "Renzi", idade: 23 };
+console.log(notNull(d_aluno)?.nome);
+notNull(null);
