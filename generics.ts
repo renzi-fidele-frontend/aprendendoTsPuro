@@ -41,3 +41,9 @@ function $<T extends Element>(selector: string): T | null {
    return document.querySelector(selector);
 }
 const linkNovo = $<HTMLAnchorElement>("a")?.href;
+
+// Exercicio criar função que apanha um valor em um objeto
+function apanharValor<T, K extends keyof T>(obj: T, key: K) {
+   return obj[key];
+}
+const nomeDele = apanharValor(d_aluno, "idade");
