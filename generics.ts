@@ -24,3 +24,14 @@ function notNull<T>(arg: T) {
 const d_aluno = { nome: "Renzi", idade: 23 };
 console.log(notNull(d_aluno)?.nome);
 notNull(null);
+
+// Generico com extensao
+function extrairTexto<T extends HTMLElement>(el: T) {
+   return { texto: el.innerText, elemento: el };
+}
+const elTest = document.querySelector("a");
+
+if (elTest) {
+   const link_botao = extrairTexto(elTest).elemento.href;
+   console.log(link_botao);
+}
