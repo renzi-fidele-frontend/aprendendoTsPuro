@@ -35,3 +35,9 @@ if (elTest) {
    const link_botao = extrairTexto(elTest).elemento.href;
    console.log(link_botao);
 }
+
+// Exercio recriar função $ do Jquery
+function $<T extends Element>(selector: string): T | null {
+   return document.querySelector(selector);
+}
+const linkNovo = $<HTMLAnchorElement>("a")?.href;
