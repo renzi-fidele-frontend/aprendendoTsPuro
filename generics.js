@@ -23,3 +23,22 @@ function notNull(arg) {
 const d_aluno = { nome: "Renzi", idade: 23 };
 console.log(notNull(d_aluno)?.nome);
 notNull(null);
+// Generico com extensao
+function extrairTexto(el) {
+    return { texto: el.innerText, elemento: el };
+}
+const elTest = document.querySelector("a");
+if (elTest) {
+    const link_botao = extrairTexto(elTest).elemento.href;
+    console.log(link_botao);
+}
+// Exercio recriar função $ do Jquery
+function $(selector) {
+    return document.querySelector(selector);
+}
+const linkNovo = $("a")?.href;
+// Exercicio criar função que apanha um valor em um objeto
+function apanharValor(obj, key) {
+    return obj[key];
+}
+const nomeDele = apanharValor(d_aluno, "idade");
