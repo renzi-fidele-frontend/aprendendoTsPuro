@@ -30,3 +30,7 @@ const elVideo = document.getElementById("#video") as HTMLVideoElement;
 /* Afirmando que o tipo é VideoElement para que eu possa utilizar as suas propriedas
  */
 elVideo.volume;
+
+// Em alguns casos posso utilizar o operador !. para afirmar que a variável sempre será null
+const el3 = document.querySelector("#el3") as HTMLAnchorElement | null;
+el3!.href = "https://olamundo.com";
