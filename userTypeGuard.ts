@@ -19,7 +19,14 @@ function isString(arg: unknown): arg is string {
 }
 function resolve(data: unknown) {
    if (isString(data)) {
-      // Consegui prever o tipo 
+      // Consegui prever o tipo
       console.log(data.toLowerCase());
    }
 }
+
+// Type Assertions - as
+// Ajuda a afirmar o tipo, para que eu possa acessar as propriedades do objeto
+const elVideo = document.getElementById("#video") as HTMLVideoElement;
+/* Afirmando que o tipo é VideoElement para que eu possa utilizar as suas propriedas
+ */
+elVideo.volume;
