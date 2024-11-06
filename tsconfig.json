@@ -1,4 +1,7 @@
-{
+{  
+   // O compileOnSave faz que ao salvar ele gere o arquivo js
+   // "compileOnSave": true,
+
    "compilerOptions": {
       "target": "ESNext",
       "strict": true
