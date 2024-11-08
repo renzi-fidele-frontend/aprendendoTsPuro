@@ -37,10 +37,10 @@ if (elTest) {
 }
 
 // Exercio recriar função $ do Jquery
-function $<T extends Element>(selector: string): T | null {
+function $el<T extends Element>(selector: string): T | null {
    return document.querySelector(selector);
 }
-const linkNovo = $<HTMLAnchorElement>("a")?.href;
+const linkNovo = $el<HTMLAnchorElement>("a")?.href;
 
 // Exercicio criar função que apanha um valor em um objeto
 function apanharValor<T, K extends keyof T>(obj: T, key: K) {
