@@ -10,4 +10,5 @@ interface JQuery {
    /** The last carousel you'll ever need. */
    slick: (options?: {}) => void;
 }
+
 // 2 - Caso declare const slick: any;

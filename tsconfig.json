@@ -3,6 +3,10 @@
    // "compileOnSave": true,
    "compilerOptions": {
       "target": "ESNext",
-      "strict": true
+      "strict": true,
+      "outDir": "dist",
+      // "include": ["scripts/**/*.ts"],
+      // Antes conferir no browser se o log é preciso
+      "sourceMap": false,
    }
 }
