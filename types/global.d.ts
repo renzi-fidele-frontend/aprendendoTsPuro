@@ -11,4 +11,7 @@ interface JQuery {
    slick: (options?: {}) => void;
 }
 
-// 2 - Caso declare const slick: any;
+// 2 - Caso a lib seja utilizada através de variável inilicializada
+
+/** Make your player yours */
+declare const videojs: any;
