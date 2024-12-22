@@ -6,4 +6,3 @@ console.log(difference);
 //  Ao utilizar lib sem types definidos deverei declarar a variável global no d.ts
 const video = videojs("video-js");
 
-

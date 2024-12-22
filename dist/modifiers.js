@@ -27,4 +27,5 @@ class Embalagem extends Bebida {
 const amarula = new Bebida("Amarula", 680);
 const emb_amarula = new Embalagem(amarula.nome, amarula.preco);
 // amarula.tipo = "comida";
-console.log(emb_amarula);
+let m = "ad";
+console.log(m.dd);

@@ -5,7 +5,7 @@
       "target": "ESNext",
       "strict": true,
       "outDir": "dist",
-      // Antes conferir no browser se o log é preciso
+      // O log do browser mostrará o arquivo ts ao invés do compilado
       "sourceMap": false
    }
 }

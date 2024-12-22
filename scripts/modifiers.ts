@@ -31,4 +31,5 @@ const emb_amarula = new Embalagem(amarula.nome, amarula.preco);
 
 // amarula.tipo = "comida";
 
-console.log(emb_amarula);
+let m: any = "ad";
+console.log(m.dd);
