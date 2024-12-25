@@ -17,26 +17,29 @@
          h6 {
             font-size: 1.3rem;
          }
+
+         /* Selecionar todo o elemento impar da tabela */
+         table tr:nth-child(odd) {
+            background-color: #f1f1f1;
+         }
       </style>
    </head>
    <body>
       <h2>Estatísticas</h2>
-
       <section id="estatisticas"></section>
 
       <hr />
 
-      <h2>Dados</h2>
+      <h2>Dados das vendas na loja</h2>
       <table border="">
          <!-- Cabecalho -->
          <thead>
-            <tr>
-               <td>Nome</td>
-               <td>Email</td>
-               <td>Compra</td>
-               <td>Pagamento</td>
-               <td>Status</td>
-            </tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Compra</th>
+            <th>Pagamento</th>
+            <th>Status</th>
+            <th>Data da operação</th>
          </thead>
          <!-- Corpo da tabela -->
          <tbody id="corpo"></tbody>
